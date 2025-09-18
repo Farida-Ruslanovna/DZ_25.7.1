@@ -28,7 +28,7 @@ void Chat::saveToFile(const std::string& filename) const {
 
     // Установка прав доступа 600
     if (chmod(filename.c_str(), S_IRUSR | S_IWUSR) != 0) {
-        // Можно логировать ошибку
+      
     }
 }
 
@@ -40,7 +40,7 @@ void Chat::loadFromFile(const std::string& filename) {
     if (!ifs)
         return;
 
-    // Читаем по три строки — каждое сообщение
+    
     while (true) {
         std::string text, sender, receiver;
         if (!std::getline(ifs, text))
@@ -53,4 +53,5 @@ void Chat::loadFromFile(const std::string& filename) {
 
         messages.emplace_back(text, sender, receiver);
     }
+
 }

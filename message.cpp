@@ -10,7 +10,7 @@ bool Message::saveToFile(const std::string& filename) const {
 
     // Установка прав доступа 600
     if (chmod(filename.c_str(), S_IRUSR | S_IWUSR) != 0) {
-        // Можно логировать ошибку
+  
         return false;
     }
     return true;
@@ -31,4 +31,5 @@ bool Message::loadFromFile(const std::string& filename) {
     if (!std::getline(ifs, _receiver)) return false;
 
     return true;
+
 }

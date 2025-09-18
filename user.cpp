@@ -14,7 +14,7 @@ bool User::loadFromFile(const std::string& filename) {
     if (!ifs)
         return false; // не удалось открыть файл
 
-    // Предполагается, что файл содержит три строки: имя, логин, пароль
+
     if (!std::getline(ifs, _name)) return false;
     if (!std::getline(ifs, _login)) return false;
     if (!std::getline(ifs, _pass)) return false;
@@ -38,3 +38,4 @@ bool User::saveToFile(const std::string& filename) const {
     return true;
 
 }
+

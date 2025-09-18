@@ -41,7 +41,7 @@ public:
 
         // Установка прав доступа 600
         if (chmod(filename.c_str(), S_IRUSR | S_IWUSR) != 0) {
-            // Можно логировать ошибку
+          
             return false;
         }
         return true;
@@ -56,7 +56,7 @@ public:
         if (!ifs)
             return false;
 
-        // Читаем строки файла — предполагается правильный формат
+    
         if (!std::getline(ifs, _text)) return false;
         if (!std::getline(ifs, _sender)) return false;
         if (!std::getline(ifs, _receiver)) return false;
@@ -64,5 +64,6 @@ public:
         return true;
     }
 };
+
 
 #endif 

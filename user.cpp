@@ -32,8 +32,9 @@ bool User::saveToFile(const std::string& filename) const {
 
     // Установка прав доступа 600
     if (chmod(filename.c_str(), S_IRUSR | S_IWUSR) != 0) {
-        // Можно логировать ошибку или вернуть false
+    
         return false;
     }
     return true;
+
 }

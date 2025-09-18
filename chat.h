@@ -42,7 +42,7 @@ public:
 
         // Установка прав 600
         if (chmod(filename.c_str(), S_IRUSR | S_IWUSR) != 0) {
-            // Можно логировать ошибку
+      
         }
     }
 
@@ -54,7 +54,7 @@ public:
         if (!ifs)
             return;
 
-        // Читаем по три строки на сообщение
+       
         while (true) {
             std::string text, sender, receiver;
             if (!std::getline(ifs, text))
@@ -69,5 +69,6 @@ public:
         }
     }
 };
+
 
 #endif
